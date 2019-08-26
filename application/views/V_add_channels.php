@@ -68,7 +68,9 @@
                   </div>
                 </div>
               </div>
-
+              <div class="text-right">
+              <a href="<?php echo base_url(); ?>#"><button type="button" class="btn btn-primary my-4">Add Channel</button></a>
+            </div>
             </div>
           </form>
         </div>
