@@ -1,19 +1,10 @@
-
-<div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
-	<div class="container-fluid">
-		<div class="header-body">
-			<!-- Card stats -->
-
-		</div>
-	</div>
-</div>
 <div class="container-fluid mt--7">
 	<div class="row">
 		<div class="col-xl-8 mb-5 mb-xl-0">
 			<h2 style="color: white">List Of Channels</h2>
 			
 			<div class="text-right">
-				<a href="#!" class="btn btn-sm btn-primary"style="background-color: white;
+				<a href="<?php echo base_url(); ?>Channels/add_channels" class="btn btn-sm btn-primary"style="background-color: white;
 				color: #646ee4; align-content: right">Add Channels</a>
 			</div>
 			<br>

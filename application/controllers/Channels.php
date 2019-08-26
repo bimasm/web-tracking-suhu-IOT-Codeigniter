@@ -24,4 +24,11 @@ class Channels extends CI_Controller {
 		$this->load->view('V_channels');
 		$this->load->view('V_footer');
 	}
+
+	public function add_channels()
+	{
+		$this->load->view('V_header');
+		$this->load->view('V_add_channels');
+		$this->load->view('V_footer');
+	}
 }
