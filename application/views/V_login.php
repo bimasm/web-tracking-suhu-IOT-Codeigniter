@@ -85,7 +85,7 @@
 									</label>
 								</div>
 								<div class="text-center">
-									<a href="<?php echo base_url(); ?>Channels" type="button" class="btn btn-primary my-4">Log in</a>
+									<a href="<?php echo base_url(); ?>Channels"><button type="button" class="btn btn-primary my-4">Log in</button></a>
 								</div>
 							</form>
 						</div>
