@@ -17,18 +17,26 @@
 	<!-- CSS Files -->
 	<link href="<?php echo base_url();?>assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
 </head>
-
-<body class="bg-default">
+<style type="text/css">
+	body{
+		background-image: url('<?php echo base_url();?>assets/img/bg.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 100%;
+		font-family: 'Numans', sans-serif;
+	}
+</style>
+<body>
 	<div class="main-content">
 
 		<!-- Header -->
-		<div class="header bg-gradient-primary py-7 py-lg-8">
+		<div class="header py-7 py-lg-8">
 
-				<div class="separator separator-bottom separator-skew zindex-100">
+				<!-- <div class="separator separator-bottom separator-skew zindex-100">
 					<svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
 						<polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
 					</svg>
-				</div>
+				</div> -->
 			</div>
 			<!-- Page content -->
 			<div class="container mt--8 pb-5">
@@ -41,16 +49,16 @@
 								<a href="#" class="btn btn-neutral btn-icon">
 									<span class="btn-inner--icon"><img src="<?php //echo base_url();?>assets/img/icons/common/github.svg"></span>
 									<span class="btn-inner--text">Github</span>
-								</a>
+								</a>background{opacity: 0.5;}
 								<a href="#" class="btn btn-neutral btn-icon">
 									<span class="btn-inner--icon"><img src="<?php //echo base_url();?>assets/img/icons/common/google.svg"></span>
 									<span class="btn-inner--text">Google</span>
 								</a>
 							</div>
 						</div> -->
-						<div class="card-body px-lg-5 py-lg-5">
+						<div class="card-body px-lg-5 py-lg-5" style="background{opacity: 0.2;}">
 							
-							<form role="form">
+							<form role="form" style="">
 								<div class="form-group mb-3">
 									<div class="input-group input-group-alternative">
 										<div class="input-group-prepend">
