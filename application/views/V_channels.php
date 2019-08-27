@@ -1,5 +1,8 @@
 <div class="container-fluid mt--7">
 	<div class="row">
+		<div class="col-2">
+
+    </div>
 		<div class="col-xl-8 mb-5 mb-xl-0">
 			<h2 style="color: white">List Of Channels</h2>
 			
@@ -17,7 +20,7 @@
 						<p class="mb-0">Channels ID : 1111</p>
 					</div>
 					<div class="col text-right">
-						<a href="#!" class="btn btn-sm btn-primary">View</a>
+						<a href="<?php echo base_url(); ?>/Channels/detail" class="btn btn-sm btn-primary">View</a>
 					</div>
 				</div>
 			</div>
