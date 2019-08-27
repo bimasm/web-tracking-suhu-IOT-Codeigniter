@@ -37,10 +37,10 @@ class Channels extends CI_Controller {
 		$this->load->view('V_detail');
 		$this->load->view('V_footer');
 	}
-	public function detailt()
+	public function detailtracking()
 	{
 		$this->load->view('V_header');
-		$this->load->view('V_detailt');
+		$this->load->view('V_detail_tracking');
 		$this->load->view('V_footer');
 	}
 }

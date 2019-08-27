@@ -20,6 +20,7 @@
 <!--   Argon JS   -->
 <script src="<?php echo base_url();?>assets/js/argon-dashboard.min.js?v=1.1.0"></script>
 <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+
 <script>
 	window.TrackJS &&
 	TrackJS.install({
