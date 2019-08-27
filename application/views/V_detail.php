@@ -47,7 +47,7 @@
     top:142px;
     left:-16px;
     z-index:-1; 
-    background:#db3f02;
+    background:#c70000;
     border-radius:44px;
     border:5px solid #4a1c03;
     box-shadow:inset 0 0 0 4px #fff;
@@ -61,7 +61,7 @@
     position:absolute;
     top:<?php $s=150-(70/100*150)+2; echo $s; ?>px;
     left:0px;
-    background:#db3f02;
+    background:#c70000;
 }
 </style>
 
