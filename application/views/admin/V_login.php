@@ -78,7 +78,7 @@
 								
 								<div class="text-right">
 									
-									<a href="<?php echo base_url(); ?>Channels"><button type="button" class="btn btn-primary my-4">Login</button></a>
+									<a href="<?php echo base_url(); ?>admin/dashboard"><button type="button" class="btn btn-primary my-4">Login</button></a>
 								</div>
 							</form>
 						</div>

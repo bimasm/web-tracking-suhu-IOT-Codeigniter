@@ -52,6 +52,7 @@
           <div class="row">
             <div class="col">
                 <canvas id="a" width="100" height="100"></canvas>
+                
             </div>
             <div class="col-auto">
             </div>

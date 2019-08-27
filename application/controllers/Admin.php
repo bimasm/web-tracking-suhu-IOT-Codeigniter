@@ -25,6 +25,15 @@ class Admin extends CI_Controller {
 		
 	}
 
+	public function dashboard()
+	{
+
+		$this->load->view('admin/V_header');
+		$this->load->view('admin/V_channels');
+		$this->load->view('admin/V_footer');
+
+	}
+
 	public function add_channels()
 	{
 		$this->load->view('admin/V_header');
