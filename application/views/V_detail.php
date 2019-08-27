@@ -23,12 +23,12 @@
 <div class="container-fluid mt--7">
     <div class="row">
         <div class="col-12">
-          <h2 style="color: white">NON TRACKING</h2>
+          <h2 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;NON TRACKING</h2>
           <h2 style="color: white">CHANNELS ID : 1111</h2>
           <br>
       </div>
   </div>
-  <div class="row">
+  <div class="row" style="text-align: -webkit-center;">
       <div class="col-1">
       </div>
       <div class="col-5">
@@ -63,7 +63,7 @@
 </div>
 </div>
 <br>
-<div class="row">
+<div class="row" style="text-align: -webkit-center;">
   <div class="col-1">
   </div>
   <div class="col-5">
@@ -72,7 +72,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col">
-                
+
             </div>
             <div class="col-auto">
             </div>
@@ -98,7 +98,7 @@
 </div>
 </div>
 <br>
-<div class="row">
+<div class="row" style="text-align: -webkit-center;">
   <div class="col-1">
   </div>
   <div class="col-5">
