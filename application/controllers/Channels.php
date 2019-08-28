@@ -35,10 +35,10 @@ class Channels extends CI_Controller {
 	public function detail()
 	{
 		$data['channels'] = json_decode($this->curl->simple_get($this->API . 'channels/844658/feeds.json?api_key=MP8CJ627LSUOL5TV&results=6'));
-		print_r($data);
-		// $this->load->view('V_header');
-		// $this->load->view('V_detail',$data);
-		// $this->load->view('V_footer');
+		// print_r($data);
+		$this->load->view('V_header');
+		$this->load->view('V_detail',$data);
+		$this->load->view('V_footer');
 
 	}
 	public function detailtracking()

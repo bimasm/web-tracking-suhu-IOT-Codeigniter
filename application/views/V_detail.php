@@ -20,99 +20,99 @@
 
     }
 
-.thermometer{
-    margin:50% 0 0 50%;
-    left:0px;
-    top:-100px;
-    width:22px;
-    height:150px;
-    display:block;
-    font:bold 14px/152px helvetica, arial, sans-serif;
-    text-align:center;
-    text-indent: 36px;
-    background: linear-gradient(top, #fff 0%, #fff 50%, #db3f02 50%, #db3f02 100%);
-    border-radius:22px 22px 0 0;
-    border:5px solid #4a1c03;
-    border-bottom:none;
-    position:absolute;
-    box-shadow:inset 0 0 0 4px #fff;
-    color:#4a1c03;
-}
+    .thermometer{
+        margin:50% 0 0 50%;
+        left:0px;
+        top:-100px;
+        width:22px;
+        height:150px;
+        display:block;
+        font:bold 14px/152px helvetica, arial, sans-serif;
+        text-align:center;
+        text-indent: 36px;
+        background: linear-gradient(top, #fff 0%, #fff 50%, #db3f02 50%, #db3f02 100%);
+        border-radius:22px 22px 0 0;
+        border:5px solid #4a1c03;
+        border-bottom:none;
+        position:absolute;
+        box-shadow:inset 0 0 0 4px #fff;
+        color:#4a1c03;
+    }
 
-.thermometer:before{
-    content:' ';
-    width:44px;
-    height:44px;
-    display:block;
-    position:absolute;
-    top:142px;
-    left:-16px;
-    z-index:-1; 
-    background:#c70000;
-    border-radius:44px;
-    border:5px solid #4a1c03;
-    box-shadow:inset 0 0 0 4px #fff;
-}
+    .thermometer:before{
+        content:' ';
+        width:44px;
+        height:44px;
+        display:block;
+        position:absolute;
+        top:142px;
+        left:-16px;
+        z-index:-1; 
+        background:#c70000;
+        border-radius:44px;
+        border:5px solid #4a1c03;
+        box-shadow:inset 0 0 0 4px #fff;
+    }
 
-.thermometer:after{
-    content:' ';
-    width:12px;
-    height:<?php $s=(70/100)*150; echo $s; ?>px;
-    display:block;
-    position:absolute;
-    top:<?php $s=150-(70/100*150)+2; echo $s; ?>px;
-    left:0px;
-    background:#c70000;
-}
-.hum{
-    margin:50% 0 0 50%;
-    left:0px;
-    top:-100px;
-    width:22px;
-    height:150px;
-    display:block;
-    font:bold 14px/152px helvetica, arial, sans-serif;
-    text-align:center;
-    text-indent: 36px;
-    background: linear-gradient(top, #fff 0%, #fff 50%, #db3f02 50%, #db3f02 100%);
-    border-radius:22px 22px 0 0;
-    border:5px solid #4a1c03;
-    border-bottom:none;
-    position:absolute;
-    box-shadow:inset 0 0 0 4px #fff;
-    color:#4a1c03;
-}
+    .thermometer:after{
+        content:' ';
+        width:12px;
+        height:<?php $s=(70/100)*150; echo $s; ?>px;
+        display:block;
+        position:absolute;
+        top:<?php $s=150-(70/100*150)+2; echo $s; ?>px;
+        left:0px;
+        background:#c70000;
+    }
+    .hum{
+        margin:50% 0 0 50%;
+        left:0px;
+        top:-100px;
+        width:22px;
+        height:150px;
+        display:block;
+        font:bold 14px/152px helvetica, arial, sans-serif;
+        text-align:center;
+        text-indent: 36px;
+        background: linear-gradient(top, #fff 0%, #fff 50%, #db3f02 50%, #db3f02 100%);
+        border-radius:22px 22px 0 0;
+        border:5px solid #4a1c03;
+        border-bottom:none;
+        position:absolute;
+        box-shadow:inset 0 0 0 4px #fff;
+        color:#4a1c03;
+    }
 
-.hum:before{
-    content:' ';
-    width:44px;
-    height:44px;
-    display:block;
-    position:absolute;
-    top:142px;
-    left:-16px;
-    z-index:-1; 
-    background:#2366da;
-    border-radius:44px;
-    border:5px solid #4a1c03;
-    box-shadow:inset 0 0 0 4px #fff;
-}
+    .hum:before{
+        content:' ';
+        width:44px;
+        height:44px;
+        display:block;
+        position:absolute;
+        top:142px;
+        left:-16px;
+        z-index:-1; 
+        background:#2366da;
+        border-radius:44px;
+        border:5px solid #4a1c03;
+        box-shadow:inset 0 0 0 4px #fff;
+    }
 
-.hum:after{
-    content:' ';
-    width:12px;
-    height:<?php $s=(30/100)*150; echo $s; ?>px;
-    display:block;
-    position:absolute;
-    top:<?php $s=150-(30/100*150)+2; echo $s; ?>px;
-    left:0px;
-    background:#2366da;
-}
-.alt{
-    font-size: 40px;
-    padding-left: 10px;
+    .hum:after{
+        content:' ';
+        width:12px;
+        height:<?php $s=(30/100)*150; echo $s; ?>px;
+        display:block;
+        position:absolute;
+        top:<?php $s=150-(30/100*150)+2; echo $s; ?>px;
+        left:0px;
+        background:#2366da;
+    }
+    .alt{
+        font-size: 40px;
+        padding-left: 10px;
 
-}
+    }
 </style>
 
 <div class="container-fluid mt--7">
@@ -123,6 +123,18 @@
           <br>
       </div>
   </div>
+  <!-- manggil data yang atas -->
+  <p><?php echo $channels->channel->id; ?></p>
+  <!-- manggil data looping -->
+  <p>ini feeds</p>
+  <?php foreach ($channels->feeds as $f) {
+      ?>
+      <p><?php echo $f->entry_id ?></p>
+  <?php  } ?>
+  <p>ini feeds kalo dipanggil 1, 1</p>
+  <p><?php echo $channels->feeds[0]->entry_id ?></p>
+
+
   <div class="row" style="text-align: -webkit-center;">
       <div class="col-1">
       </div>
@@ -169,7 +181,7 @@
           <div class="row">
             <div class="col">
                 <span style="margin-left: 30px;">30%</span>
-                    <span class="hum"></span>​
+                <span class="hum"></span>​
             </div>
             <div class="col-auto">
             </div>
