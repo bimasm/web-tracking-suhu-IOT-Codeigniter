@@ -17,7 +17,102 @@
         border-radius: 0px;
         width: 300px;
         height: 250px;
+
     }
+
+.thermometer{
+    margin:50% 0 0 50%;
+    left:0px;
+    top:-100px;
+    width:22px;
+    height:150px;
+    display:block;
+    font:bold 14px/152px helvetica, arial, sans-serif;
+    text-align:center;
+    text-indent: 36px;
+    background: linear-gradient(top, #fff 0%, #fff 50%, #db3f02 50%, #db3f02 100%);
+    border-radius:22px 22px 0 0;
+    border:5px solid #4a1c03;
+    border-bottom:none;
+    position:absolute;
+    box-shadow:inset 0 0 0 4px #fff;
+    color:#4a1c03;
+}
+
+.thermometer:before{
+    content:' ';
+    width:44px;
+    height:44px;
+    display:block;
+    position:absolute;
+    top:142px;
+    left:-16px;
+    z-index:-1; 
+    background:#c70000;
+    border-radius:44px;
+    border:5px solid #4a1c03;
+    box-shadow:inset 0 0 0 4px #fff;
+}
+
+.thermometer:after{
+    content:' ';
+    width:12px;
+    height:<?php $s=(70/100)*150; echo $s; ?>px;
+    display:block;
+    position:absolute;
+    top:<?php $s=150-(70/100*150)+2; echo $s; ?>px;
+    left:0px;
+    background:#c70000;
+}
+.hum{
+    margin:50% 0 0 50%;
+    left:0px;
+    top:-100px;
+    width:22px;
+    height:150px;
+    display:block;
+    font:bold 14px/152px helvetica, arial, sans-serif;
+    text-align:center;
+    text-indent: 36px;
+    background: linear-gradient(top, #fff 0%, #fff 50%, #db3f02 50%, #db3f02 100%);
+    border-radius:22px 22px 0 0;
+    border:5px solid #4a1c03;
+    border-bottom:none;
+    position:absolute;
+    box-shadow:inset 0 0 0 4px #fff;
+    color:#4a1c03;
+}
+
+.hum:before{
+    content:' ';
+    width:44px;
+    height:44px;
+    display:block;
+    position:absolute;
+    top:142px;
+    left:-16px;
+    z-index:-1; 
+    background:#2366da;
+    border-radius:44px;
+    border:5px solid #4a1c03;
+    box-shadow:inset 0 0 0 4px #fff;
+}
+
+.hum:after{
+    content:' ';
+    width:12px;
+    height:<?php $s=(30/100)*150; echo $s; ?>px;
+    display:block;
+    position:absolute;
+    top:<?php $s=150-(30/100*150)+2; echo $s; ?>px;
+    left:0px;
+    background:#2366da;
+}
+.alt{
+    font-size: 40px;
+    padding-left: 10px;
+
+}
 </style>
 
 <div class="container-fluid mt--7">
@@ -37,7 +132,8 @@
             <div class="card-body">
               <div class="row">
                 <div class="col">
-
+                    <span style="margin-left: 30px;">70°C</span>
+                    <span class="thermometer"></span>​
                 </div>
                 <div class="col-auto">
                 </div>
@@ -52,7 +148,6 @@
           <div class="row">
             <div class="col">
                 <canvas id="a" width="100" height="100"></canvas>
-                
             </div>
             <div class="col-auto">
             </div>
@@ -73,7 +168,8 @@
         <div class="card-body">
           <div class="row">
             <div class="col">
-
+                <span style="margin-left: 30px;">30%</span>
+                    <span class="hum"></span>​
             </div>
             <div class="col-auto">
             </div>
@@ -107,8 +203,8 @@
     <div class="card card-stats mb-4 mb-xl-0">
         <div class="card-body">
           <div class="row">
-            <div class="col">
-
+            <div class="col"><br><br><br>
+                <span class="alt"><b>150</b> mdpl</span>
             </div>
             <div class="col-auto">
             </div>
@@ -133,7 +229,6 @@
 <div class="col-1">
 </div>
 </div>
-
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
 <script>
@@ -255,3 +350,4 @@
         }
     });
 </script>
+
