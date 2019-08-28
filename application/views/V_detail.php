@@ -57,10 +57,10 @@
     .thermometer:after{
         content:' ';
         width:12px;
-        height:<?php $s=(70/100)*150; echo $s; ?>px;
+        height:<?php $s=($channels->feeds[0]->field3/100)*150; echo $s; ?>px;
         display:block;
         position:absolute;
-        top:<?php $s=150-(70/100*150)+2; echo $s; ?>px;
+        top:<?php $s=150-($channels->feeds[0]->field3/100*150)+2; echo $s; ?>px;
         left:0px;
         background:#c70000;
     }
@@ -101,10 +101,10 @@
     .hum:after{
         content:' ';
         width:12px;
-        height:<?php $s=(30/100)*150; echo $s; ?>px;
+        height:<?php $s=($channels->feeds[0]->field4/100)*150; echo $s; ?>px;
         display:block;
         position:absolute;
-        top:<?php $s=150-(30/100*150)+2; echo $s; ?>px;
+        top:<?php $s=150-($channels->feeds[0]->field4/100*150)+2; echo $s; ?>px;
         left:0px;
         background:#2366da;
     }
@@ -119,20 +119,11 @@
     <div class="row">
         <div class="col-12">
           <h2 style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;NON TRACKING</h2>
-          <h2 style="color: white">CHANNELS ID : 1111</h2>
+          <h2 style="color: white">CHANNELS ID : <?php echo $channels->channel->id; ?></h2>
           <br>
       </div>
   </div>
-  <!-- manggil data yang atas -->
-  <p><?php echo $channels->channel->id; ?></p>
-  <!-- manggil data looping -->
-  <p>ini feeds</p>
-  <?php foreach ($channels->feeds as $f) {
-      ?>
-      <p><?php echo $f->entry_id ?></p>
-  <?php  } ?>
-  <p>ini feeds kalo dipanggil 1, 1</p>
-  <p><?php echo $channels->feeds[0]->entry_id ?></p>
+  
 
 
   <div class="row" style="text-align: -webkit-center;">
@@ -144,7 +135,7 @@
             <div class="card-body">
               <div class="row">
                 <div class="col">
-                    <span style="margin-left: 30px;">70°C</span>
+                    <span style="margin-left: 30px;"><?php echo $channels->feeds[0]->field3 ?>°C</span>
                     <span class="thermometer"></span>​
                 </div>
                 <div class="col-auto">
@@ -180,7 +171,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col">
-                <span style="margin-left: 30px;">30%</span>
+                <span style="margin-left: 30px;"><?php echo $channels->feeds[0]->field4 ?>%</span>
                 <span class="hum"></span>​
             </div>
             <div class="col-auto">
@@ -216,7 +207,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col"><br><br><br>
-                <span class="alt"><b>150</b> mdpl</span>
+                <span class="alt"><b><?php echo $channels->feeds[0]->field6 ?></b> mdpl</span>
             </div>
             <div class="col-auto">
             </div>
@@ -248,10 +239,12 @@
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['1', '2', '3', '4', '5', '6'],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                label: 'Test TRUE NB-IoT',
+                data: [<?php foreach ($channels->feeds as $f) { ?>
+                            <?php echo $f->field3 ?>,
+                    <?php  } ?>,100],
                 backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -288,10 +281,12 @@
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['1', '2', '3', '4', '5', '6'],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                label: 'Test TRUE NB-IoT',
+                data: [<?php foreach ($channels->feeds as $f) { ?>
+                            <?php echo $f->field4 ?>,
+                    <?php  } ?>,100],
                 backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -328,10 +323,12 @@
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['1', '2', '3', '4', '5', '6'],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                label: 'Test TRUE NB-IoT',
+                data: [<?php foreach ($channels->feeds as $f) { ?>
+                            <?php echo $f->field6 ?>,
+                    <?php  } ?>,100],
                 backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
