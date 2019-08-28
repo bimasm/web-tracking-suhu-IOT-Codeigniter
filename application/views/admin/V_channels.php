@@ -20,7 +20,7 @@
 						<p class="mb-0">Channels ID : 1111</p>
 					</div>
 					<div class="col text-right">
-						<a href="<?php echo base_url(); ?>/admin/detail" class="btn btn-sm btn-primary">View</a>
+						<a href="<?php echo base_url(); ?>admin/detail" class="btn btn-sm btn-primary">View</a>
 					</div>
 				</div>
 			</div>
@@ -32,7 +32,7 @@
 						<p class="mb-0">Channels ID : 1111</p>
 					</div>
 					<div class="col text-right">
-						<a href="<?php echo base_url(); ?>/admin/detailtracking" class="btn btn-sm btn-primary">View</a>
+						<a href="<?php echo base_url(); ?>admin/detailtracking" class="btn btn-sm btn-primary">View</a>
 					</div>
 				</div>
 			</div>

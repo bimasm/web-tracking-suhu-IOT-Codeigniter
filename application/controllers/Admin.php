@@ -3,21 +3,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	var $API = "";
+
+	function __construct(){
+		parent::__construct();
+		$this->load->helper('url');
+		 //$this->API="http://10.10.122.94:8181/Hirest/hirest-rest"; //local
+		$this->API="https://api.thingspeak.com/"; //
+		$this->load->library(array('session','form_validation',));
+		$this->load->helper(array('url','form','security'));
+		// $logged_in = $this->session->userdata('status')=='login' && ($this->session->userdata('profil')=='4');
+		// if(!$logged_in){
+		// 	redirect('Login');
+		// }
+	}
+
+
 	public function index()
 	{
 		
@@ -42,14 +43,18 @@ class Admin extends CI_Controller {
 	}
 	public function detail()
 	{
+		$data['channels'] = json_decode($this->curl->simple_get($this->API . 'channels/844658/feeds.json?api_key=MP8CJ627LSUOL5TV&results=6'));
+		// print_r($data);
 		$this->load->view('admin/V_header');
-		$this->load->view('admin/V_detail');
+		$this->load->view('admin/V_detail',$data);
 		$this->load->view('admin/V_footer');
+
 	}
 	public function detailtracking()
 	{
+		$data['channels'] = json_decode($this->curl->simple_get($this->API . 'channels/844658/feeds.json?api_key=MP8CJ627LSUOL5TV&results=6'));
 		$this->load->view('admin/V_header');
-		$this->load->view('admin/V_detail_tracking');
+		$this->load->view('admin/V_detail_tracking',$data);
 		$this->load->view('admin/V_footer');
 	}
 }

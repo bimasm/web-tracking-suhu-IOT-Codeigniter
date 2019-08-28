@@ -43,8 +43,9 @@ class Channels extends CI_Controller {
 	}
 	public function detailtracking()
 	{
+		$data['channels'] = json_decode($this->curl->simple_get($this->API . 'channels/844658/feeds.json?api_key=MP8CJ627LSUOL5TV&results=6'));
 		$this->load->view('V_header');
-		$this->load->view('V_detail_tracking');
+		$this->load->view('V_detail_tracking',$data);
 		$this->load->view('V_footer');
 	}
 	// public function getData()

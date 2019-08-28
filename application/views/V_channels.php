@@ -17,7 +17,7 @@
 						<p class="mb-0">Channels ID : 1111</p>
 					</div>
 					<div class="col text-right">
-						<a href="<?php echo base_url(); ?>/Channels/detail" class="btn btn-sm btn-primary">View</a>
+						<a href="<?php echo base_url(); ?>channels/detail" class="btn btn-sm btn-primary">View</a>
 					</div>
 				</div>
 			</div>
@@ -29,7 +29,7 @@
 						<p class="mb-0">Channels ID : 1111</p>
 					</div>
 					<div class="col text-right">
-						<a href="<?php echo base_url(); ?>/Channels/detailtracking" class="btn btn-sm btn-primary">View</a>
+						<a href="<?php echo base_url(); ?>channels/detailtracking" class="btn btn-sm btn-primary">View</a>
 					</div>
 				</div>
 			</div>

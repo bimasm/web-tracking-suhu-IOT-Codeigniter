@@ -1,3 +1,4 @@
+<meta http-equiv="refresh" content="60">
 <style type="text/css">
     .title-label{
         color: black;
