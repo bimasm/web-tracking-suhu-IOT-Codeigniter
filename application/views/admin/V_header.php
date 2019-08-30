@@ -36,7 +36,7 @@
 									<img alt="Image placeholder" src="<?php echo base_url();?>//assets/img/theme/team-4-800x800.jpg">
 								</span>
 								<div class="media-body ml-2 d-none d-lg-block">
-									<span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+									<span class="mb-0 text-sm  font-weight-bold"><?php echo $this->session->userdata('username');?></span>
 								</div>
 							</div>
 						</a>
@@ -44,24 +44,24 @@
 							<div class=" dropdown-header noti-title">
 								<h6 class="text-overflow m-0">Welcome!</h6>
 							</div>
-							<a href="./examples/profile.html" class="dropdown-item">
+							<!-- <a href="./examples/profile.html" class="dropdown-item">
 								<i class="ni ni-single-02"></i>
 								<span>My profile</span>
-							</a>
+							</a> -->
 							<a href="./examples/profile.html" class="dropdown-item">
 								<i class="ni ni-settings-gear-65"></i>
 								<span>Settings</span>
 							</a>
-							<a href="./examples/profile.html" class="dropdown-item">
+							<!-- <a href="./examples/profile.html" class="dropdown-item">
 								<i class="ni ni-calendar-grid-58"></i>
 								<span>Activity</span>
 							</a>
 							<a href="./examples/profile.html" class="dropdown-item">
 								<i class="ni ni-support-16"></i>
 								<span>Support</span>
-							</a>
+							</a> -->
 							<div class="dropdown-divider"></div>
-							<a href="#!" class="dropdown-item">
+							<a href="<?php echo base_url('administrator/logoutt');?>" class="dropdown-item">
 								<i class="ni ni-user-run"></i>
 								<span>Logout</span>
 							</a>

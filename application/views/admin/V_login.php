@@ -58,13 +58,13 @@
 						</div> -->
 						<div class="card-body px-lg-5 py-lg-5" style="background{opacity: 0.2;}">
 							
-							<form role="form" style="">
+							<form role="form" style="" method="post" action="<?php echo base_url('login/loginn'); ?>">
 								<div class="form-group mb-3">
 									<div class="input-group input-group-alternative">
 										<div class="input-group-prepend">
 											<span class="input-group-text"><i class="ni ni-email-83"></i></span>
 										</div>
-										<input class="form-control" placeholder="Username" type="text">
+										<input class="form-control" placeholder="Username" type="text" name="username">
 									</div>
 								</div>
 								<div class="form-group">
@@ -72,15 +72,16 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
 										</div>
-										<input class="form-control" placeholder="Password" type="password">
+										<input class="form-control" placeholder="Password" type="password" name="password">
 									</div>
 								</div>
 								
 								<div class="text-right">
 									
-									<a href="<?php echo base_url(); ?>admin/dashboard"><button type="button" class="btn btn-primary my-4">Login</button></a>
+									<a href="<?php echo base_url('admin/dashboard'); ?>"><input type="submit" class="btn btn-primary my-4" value="Login"></a>
 								</div>
 							</form>
+
 						</div>
 					</div>
 					

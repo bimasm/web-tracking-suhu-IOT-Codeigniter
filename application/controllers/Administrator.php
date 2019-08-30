@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Administrator extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
@@ -14,42 +14,13 @@ class Login extends CI_Controller {
 
 	public function index()
 	{
-		if ($this->session->userdata('statses') == "login") {
-		redirect(base_url('channels'));
+		if ($this->session->userdata('statses') == "admin") {
+		redirect(base_url('admin'));
 		}else{
-		$this->load->view('V_login');
+		$this->load->view('admin/V_login');
 		}
 	}
 
-	public function login(){
-		$username=$this->input->post('username');
-		$password=$this->input->post('password');
-		
-		$cek=$this->M_user->cek_login($username,$password)->num_rows();
-		if ($cek>0) {
-			
-			$data_session = array(
-				'username' => $username,
-				'password' => $password,
-				'statses' => "login" 
-				);
-			$this->session->set_userdata($data_session);
-			redirect(base_url('channels'));
-			// print_r($data_session);
-		}else{
-			redirect(base_url());
-		}
-	}
-	public function logout(){
-		$data_session = array(
-				'username' => $username,
-				'password' => $password,
-				'statses' => "login" 
-				);
-		$this->session->unset_userdata($data_session);
-		$this->session->sess_destroy();
-		redirect(base_url());
-	}
 	public function loginn(){
 		$username=$this->input->post('username');
 		$password=$this->input->post('password');

@@ -13,10 +13,11 @@ class Channels extends CI_Controller {
 		$this->API="https://api.thingspeak.com/"; //
 		$this->load->library(array('session','form_validation',));
 		$this->load->helper(array('url','form','security'));
-		// $logged_in = $this->session->userdata('status')=='login' && ($this->session->userdata('profil')=='4');
-		// if(!$logged_in){
-		// 	redirect('Login');
-		// }
+		$this->load->model('M_user');
+		$logged_in = $this->session->userdata('statses')=='login';
+		if(!$logged_in){
+			redirect(base_url());
+		}
 	}
 
 	public function index()
